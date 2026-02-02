@@ -1,4 +1,4 @@
-# Lab_2_SEG_3125
+# Lab_3_SEG_3125
 Min Key Park - SID: 6900749 100%
     Inital work and logic
 Sajida Mohamed - SID: 300117577 !00%
