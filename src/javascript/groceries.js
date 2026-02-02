@@ -16,7 +16,7 @@ var products = [
 			pescatarian: true
 		},
 		organic: true,
-		image: "Image/broccoli.png",
+		image: "assets/images/broccoli.png",
 		price: 1.99
 	},
 	{
@@ -29,7 +29,7 @@ var products = [
 			pescatarian: true
 		},
 		organic: true,
-		image: "Image/bread.png",
+		image: "assets/images/bread.png",
 		price: 2.35
 	},
 	{
@@ -42,7 +42,7 @@ var products = [
 			pescatarian: false
 		},
 		organic: true,
-		image: "Image/salmon.png",
+		image: "assets/images/salmon.png",
 		price: 10.00
 	},
 	{
@@ -55,7 +55,7 @@ var products = [
 			pescatarian: true
 		},
 		organic: false,
-		image: "Image/yogurt.png",
+		image: "assets/images/yogurt.png",
 		price: 3.50
 	},
 	{
@@ -68,7 +68,7 @@ var products = [
 			pescatarian: true
 		},
 		organic: false,
-		image: "Image/almond_milk.png",
+		image: "assets/images/almond_milk.png",
 		price: 4.99
 	},
 	{
@@ -81,7 +81,7 @@ var products = [
 			pescatarian: true 
 		},
 		organic: true,
-		image: "Image/apple.png",
+		image: "assets/images/apple.png",
 		price: 3.50
 	},
 	{
@@ -94,7 +94,7 @@ var products = [
 			pescatarian: true 
 		},
 		organic: false,
-		image: "Image/milk.png",
+		image: "assets/images/milk.png",
 		price: 4.25
 	},
 	{
@@ -107,7 +107,7 @@ var products = [
 			pescatarian: true 
 		},
 		organic: false,
-		image: "Image/cheese.png",
+		image: "assets/images/cheese.png",
 		price: 7.99
 	},
 	{
@@ -120,7 +120,7 @@ var products = [
 			pescatarian: false 
 		},
 		organic: false,
-		image: "Image/chicken.png",
+		image: "assets/images/chicken.png",
 		price: 9.00
 	},
 	{
@@ -133,7 +133,7 @@ var products = [
 			pescatarian: true 
 		},
 		organic: true,
-		image: "Image/tofu.png",
+		image: "assets/images/tofu.png",
 		price: 2.99
 	},
 	{
@@ -146,7 +146,7 @@ var products = [
 			pescatarian: true 
 		},
 		organic: false,
-		image: "Image/pasta.png",
+		image: "assets/images/pasta.png",
 		price: 5.50
 	},
 	{
@@ -158,7 +158,7 @@ var products = [
 			pescatarian: true 
 		},
 		organic: true,
-		image: "Image/eggs.png",
+		image: "assets/images/eggs.png",
 		price: 4.99
 	}
 ];
