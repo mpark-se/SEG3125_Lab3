@@ -35,10 +35,10 @@
   <br>
   <!-- Enlarge text for Lucie here, change css as you see fit - Matt -->
   <button id="enlargeTextOn" type="button" class="block" value="false" onclick="enlargeText()">
-    Enlarge
+    Enlarge Text
   </button>
   <button id="enlargeTextOff" type="button" class="block" value="false" style="display: none;" onclick="enlargeText()">
-    Reduce
+    Reduce Text
   </button>
 
 </div>
@@ -46,10 +46,27 @@
 <div id="Products" class="tabcontent">
   <h3>Your targeted products</h3>
   <p>We preselected products based on your restrictions.</p>
-	 Choose items to buy:
+
+  <table>
+    <tr>
+      <th style="text-align: left;">Choose items to buy:</th>
+      <th style="text-align: right;">
+        TODO Make this sort filter nice - Matt
+        <select id="sortSelect" name="sorts" onchange="getSortFilter(this.value)">
+          <option value="p_ascend" selected>Price: Ascending</option>
+          <option value="p_descend">Price: Desending</option>
+          <option value="a_ascend">Alphabetical: Ascending</option>
+          <option value="a_descend">Alphabetical: Descending</option>
+        </select>
+      </th>
+    </tr>
+  </table>
 	 <div id="displayProduct"></div>
-	 <button id="addCart" type="button" class="block" onclick="selectedItems()">
+	 <button id="addCart" type="button" class="block" value="false" onclick="selectedItems()">
 		Add selected items to cart.
+	</button>
+  <button id="addCartDisabled" type="button" class="block" disabled style="display: none;">
+		Added to cart!
 	</button>
   <!-- TODO Populate initial products -->
 </div>

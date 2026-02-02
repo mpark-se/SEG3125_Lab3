@@ -121,3 +121,15 @@ footer {
   background-color: #34495e;
   max-width: 200px;
 }
+
+/* Button confirm */
+#addCartDisabled {
+  background-color: #57B9FF;
+}
+
+
+table 
+{
+    table-layout:fixed;
+    width:100%;
+}
