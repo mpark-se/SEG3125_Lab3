@@ -112,7 +112,12 @@ footer {
 }
 
 /* Accessibility */
-#enlargeText {
+#enlargeTextOn {
+  background-color: #34495e;
+  max-width: 200px;
+}
+
+#enlargeTextOff {
   background-color: #34495e;
   max-width: 200px;
 }

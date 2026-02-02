@@ -197,13 +197,19 @@ function updateCartDisplay() {
 
 // Change size of text for visually impaired
 function enlargeText() {
-	if (document.getElementById("enlargeText").value == "false") {
+	const buttonOn = document.getElementById("enlargeTextOn");
+	const buttonOff = document.getElementById("enlargeTextOff");
+	if (buttonOn.value == "false") {
 		document.body.style.fontSize = '150%';
-		document.getElementById("enlargeText").value = "true";
+		buttonOn.value = "true";
+		buttonOn.style.display = "none";
+		buttonOff.style.display = "block";
 	}
 	else {
 		document.body.style.fontSize = '100%';
-		document.getElementById("enlargeText").value = "false";
+		buttonOn.value = "false";
+		buttonOn.style.display = "block";
+		buttonOff.style.display = "none";
 	}
 	
 }
