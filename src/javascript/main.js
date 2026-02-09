@@ -69,32 +69,32 @@ function populateListProductChoices(restrictions, slct2, sortArray, cartDisplay 
 		// Small update to show cents - Matt
 		let productPrice = optionArray[i][1].toFixed(2);
 		let productObj = products.find(p => p.name === nameOnly);
+		var productCard = document.createElement("div");
+		productCard.className = "product-card";
 
-		var productTable = document.createElement("div");
-        productTable.style.display = "flex";
-        productTable.style.alignItems = "center";
-        productTable.style.marginBottom = "15px";
-        productTable.style.gap = "15px"; 
+		// Product card--> img + h4 + p + p + button
+
 
 		//Create the image element
 		var img = document.createElement("img");
 		img.src = productObj.image; 
 		img.style.width = "50px";
 		img.style.height = "50px";
-		productTable.appendChild(img);
+		productCard.appendChild(img);
 
 		//Create the label (This is where we show the price to the user)
-		var label = document.createElement('label');
-		label.htmlFor = nameOnly;
-		var labelText = nameOnly + " $" + productPrice;
-		label.appendChild(document.createTextNode(labelText));
-		productTable.appendChild(label);
+		var label = document.createElement('h4');
+		label.innerText = nameOnly;
+		productCard.appendChild(label);
+
+		var price = document.createElement('p');
+		price.innerText = `$${productPrice}`;
+		productCard.appendChild(price);
+
 
 		//Div container to place A +/- buttons and quantity selector
 		var qtyDiv = document.createElement("div");
-		qtyDiv.style.display = "flex";
-		qtyDiv.style.alignItems = "center";
-		qtyDiv.style.gap = "10px";
+		qtyDiv.className = "qty-controls";
 
 		let qtyInput = document.createElement("input");
 		qtyInput.type = "text";
@@ -148,6 +148,8 @@ function populateListProductChoices(restrictions, slct2, sortArray, cartDisplay 
 		qtyDiv.appendChild(qtyInput);
 		qtyDiv.appendChild(addButton);
 
+		productCard.appendChild(qtyDiv);
+
 		if (cartDisplay != null) {
 			const removeBtn = document.createElement("button");
 			removeBtn.innerText = "Remove";
@@ -158,8 +160,8 @@ function populateListProductChoices(restrictions, slct2, sortArray, cartDisplay 
 			qtyDiv.appendChild(removeBtn);
 		}
 
-		productTable.appendChild(qtyDiv);
-		s2.appendChild(productTable);
+		productCard.appendChild(qtyDiv);
+		s2.appendChild(productCard);
 	}
 }
 	

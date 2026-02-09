@@ -90,11 +90,49 @@ select {
 
 /* Product Selection List */
 #displayProduct {
-  border: 1px solid #eee;
-  padding: 15px;
-  border-radius: 8px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: center;
+  gap: 0.5em;
+  margin-top: 20px;
+  padding: 0px;
   background-color: #fafafa;
 }
+
+.product-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 12px;
+  text-align: center;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  border: 1px solid #eee;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.product-card h4 {
+  margin: 6px 0 2px;
+  font-size: 1rem;
+}
+
+.product-card p {
+  margin: 0;
+}
+
+.product-card img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin: 0 auto;
+}
+
+.product-card .qty-controls {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
 
 /* Footer Styling */
 footer {
