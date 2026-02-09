@@ -70,6 +70,8 @@ function populateListProductChoices(restrictions, slct2, sortArray, cartDisplay 
 		let productPrice = optionArray[i][1].toFixed(2);
 		let productObj = products.find(p => p.name === nameOnly);
 		var productCard = document.createElement("div");
+		productCard.dataset.name = nameOnly;
+		productCard.dataset.price = productPrice;
 		productCard.className = "product-card";
 
 		// Product card--> img + h4 + p + p + button
@@ -160,7 +162,6 @@ function populateListProductChoices(restrictions, slct2, sortArray, cartDisplay 
 			qtyDiv.appendChild(removeBtn);
 		}
 
-		productCard.appendChild(qtyDiv);
 		s2.appendChild(productCard);
 	}
 }
@@ -175,8 +176,7 @@ function selectedItems() {
 
 	for (let i = 0; i < productRows.length; i++) {
 		const row = productRows[i];
-		const label = row.querySelector('label');
-		const productName = label.textContent.split(" $")[0];
+		const productName = row.dataset.name;
 		const qtyInput = row.querySelector('input[name="quantity"]');
 		const quantity = Number(qtyInput.value);
 
@@ -184,7 +184,7 @@ function selectedItems() {
 		efficiency in running updatedCardDisplay() func - Matt */
 		totalQuantity += quantity;
 		// Need to get price as well to pass down to global cart - Matt
-		const price = Number(label.innerText.slice(label.innerText.indexOf('$') + 1))
+		const price = Number(row.dataset.price);
 
 		if (quantity > 0) {
         	let cartItem = globalCart.find(item => item.name === productName);
