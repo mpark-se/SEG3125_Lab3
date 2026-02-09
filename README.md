@@ -9,6 +9,6 @@ Min Key Park - SID: 6900749 100%
 Sajida Mohamed - SID: 300117577 !00%
     Added Quantities and changed it so multiple restrictions cvan be applied
 Mohammadjavad Aghaeipour Kalyan -SID: 300427782 100%
-    i did the images, added a 8 of the products, made the total sum to calculate and display in the cart and fixed some mistakes in the categories tab
+    I overhauled the Cart with individual item removal and unified Filtering/Sorting into a hidden menu triggered by a filter icon. I also stabilized the code by fixing script crashes and adding multi-algorithm sorting like A-Z and Price.
 
 GithubPages: https://mpark-se.github.io/SEG3125_Lab3/
