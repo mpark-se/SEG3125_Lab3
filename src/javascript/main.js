@@ -84,10 +84,23 @@ function populateListProductChoices(restrictions, slct2, sortArray, cartDisplay 
 		img.style.height = "50px";
 		productCard.appendChild(img);
 
+		//Organic Badge
+
+		if (productObj.organic == true) {
+			var organicBadge = document.createElement("span");
+			organicBadge.innerText = "[Organic]";
+			organicBadge.className = "badge-organic";
+		}
+
+
 		//Create the label (This is where we show the price to the user)
 		var label = document.createElement('h4');
-		label.innerText = nameOnly;
+		label.innerHTML = `
+		${productObj.organic ? '<span class="badge-organic">Organic</span>' : ''}
+		${nameOnly}
+		`;
 		productCard.appendChild(label);
+
 
 		var price = document.createElement('p');
 		price.innerText = `$${productPrice}`;

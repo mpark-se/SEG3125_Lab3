@@ -182,8 +182,13 @@ function restrictListProducts(allProducts, restrictions) {
 
 		for (let j=0; j<restrictions.length; j++) {
 			let restriction = restrictions[j];
+			// Check if the restriction is organic
+			if (restriction === "organic" && product.organic != true) {
+				includeProduct = false;
+				break;
+			}
 			// Value for checkbox MUST be the same as key in clientStatus object
-			if(product.clientStatus[restriction] != true) {
+			if(restriction != "organic" && product.clientStatus[restriction] != true) {
 				includeProduct = false;
 				break;
 			}

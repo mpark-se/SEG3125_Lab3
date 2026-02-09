@@ -171,3 +171,38 @@ table
     table-layout:fixed;
     width:100%;
 }
+
+.badge-organic {
+  color: rgb(11, 82, 7);
+  font-weight: bold;
+  margin: 6px 0 2px;
+  font-size: 1rem;
+}
+
+/*Sort filter dropdown */
+
+.products-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.sort-control {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.sort-control label {
+  font-weight: bold;
+  color: #555;
+}
+
+
+.sort-control select {
+  border-radius: 8px;
+  background-color: #fff;
+  font-size: 0.95rem;
+  cursor: pointer;
+} 
